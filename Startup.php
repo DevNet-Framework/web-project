@@ -2,11 +2,11 @@
 
 namespace Application;
 
-use Artister\DevNet\Configuration\IConfiguration;
-use Artister\DevNet\Dependency\IServiceCollection;
-use Artister\DevNet\Dispatcher\IApplicationBuilder;
-use Artister\DevNet\Extensions\DependencyExtensions;
-use Artister\DevNet\Extensions\HostingExtensions;
+use Artister\system\Configuration\IConfiguration;
+use Artister\system\Dependency\IServiceCollection;
+use Artister\Web\Dispatcher\IApplicationBuilder;
+use Artister\Web\Extensions\DependencyExtensions;
+use Artister\Web\Extensions\HostingExtensions;
 
 class Startup
 {

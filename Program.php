@@ -2,8 +2,8 @@
 
 namespace Application;
 
-use Artister\DevNet\Hosting\WebHost;
-use Artister\DevNet\Hosting\IWebHostBuilder;
+use Artister\Web\Hosting\WebHost;
+use Artister\Web\Hosting\IWebHostBuilder;
 
 class Program
 {
