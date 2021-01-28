@@ -2,11 +2,11 @@
 
 namespace Application;
 
-use Artister\system\Configuration\IConfiguration;
-use Artister\system\Dependency\IServiceCollection;
+use Artister\System\Configuration\IConfiguration;
+use Artister\System\Dependency\IServiceCollection;
 use Artister\Web\Dispatcher\IApplicationBuilder;
-use Artister\Web\Extensions\DependencyExtensions;
-use Artister\Web\Extensions\HostingExtensions;
+use Artister\Web\Extensions\ServiceCollectionExtensions;
+use Artister\Web\Extensions\ApplicationBuilderExtensions;
 
 class Startup
 {
@@ -37,7 +37,7 @@ class Startup
         $app->useAuthorization();
         
         $app->useEndpoint(function($routes) {
-            Routes::registerRoutes($routes);
+            //Routes::registerRoutes($routes);
             $routes->mapRoute("default", "{controller=Home}/{action=Index}/{id?}");
         });
     }
