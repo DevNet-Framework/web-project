@@ -13,8 +13,7 @@
     "require": {
         "php": ">=7.4.0",
         "devnet/cli": "dev-master",
-        "devnet/web": "dev-master",
-        "devnet/entity": "dev-master"
+        "devnet/web": "dev-master"
     },
     "autoload": {
         "psr-4": {
