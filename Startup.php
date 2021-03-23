@@ -2,11 +2,13 @@
 
 namespace Application;
 
+use Artister\System\Async\Task;
 use Artister\System\Configuration\IConfiguration;
 use Artister\System\Dependency\IServiceCollection;
 use Artister\Web\Dispatcher\IApplicationBuilder;
 use Artister\Web\Extensions\ServiceCollectionExtensions;
 use Artister\Web\Extensions\ApplicationBuilderExtensions;
+use Artister\Web\Http\HttpContext;
 
 class Startup
 {
@@ -19,11 +21,7 @@ class Startup
 
     public function configureServices(IServiceCollection $services)
     {
-        $services->addMvc();
-        
-        $services->addAuthentication();
-
-        $services->addAuthorisation();
+        $services->addHttp();
     }
 
     public function configure(IApplicationBuilder $app)
@@ -31,14 +29,14 @@ class Startup
         $app->UseExceptionHandler();
 
         $app->useRouter();
-
-        $app->useAuthentication();
-
-        $app->useAuthorization();
         
-        $app->useEndpoint(function($routes) {
-            //Routes::registerRoutes($routes);
-            $routes->mapRoute("default", "{controller=Home}/{action=index}/{id?}");
-        });
+        $app->useEndpoint(function($routes)
+        {
+            $routes->mapGet("/", function(HttpContext $context) : Task
+            {
+               $context->Response->Body->write("Hello World!");
+               return Task::completedTask();
+            });
+         });
     }
 }
