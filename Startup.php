@@ -21,7 +21,7 @@ class Startup
 
     public function configureServices(IServiceCollection $services)
     {
-        $services->addHttp();
+        // services
     }
 
     public function configure(IApplicationBuilder $app)
