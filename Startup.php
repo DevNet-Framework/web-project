@@ -3,8 +3,8 @@
 namespace Application;
 
 use DevNet\System\Async\Task;
-use DevNet\System\Configuration\IConfiguration;
-use DevNet\System\Dependency\IServiceCollection;
+use DevNet\Web\Configuration\IConfiguration;
+use DevNet\Web\Dependency\IServiceCollection;
 use DevNet\Web\Dispatcher\IApplicationBuilder;
 use DevNet\Web\Extensions\ServiceCollectionExtensions;
 use DevNet\Web\Extensions\ApplicationBuilderExtensions;
