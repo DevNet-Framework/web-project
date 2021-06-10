@@ -1,7 +1,7 @@
 {
     "name": "devnet/web-project",
     "description": "DevNet Web Application Project",
-    "type": "project",
+    "type": "devnet-template",
     "license": "MIT",
     "authors": [
         {
