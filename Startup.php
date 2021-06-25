@@ -3,12 +3,12 @@
 namespace Application;
 
 use DevNet\System\Async\Task;
-use DevNet\Web\Configuration\IConfiguration;
-use DevNet\Web\Dependency\IServiceCollection;
-use DevNet\Web\Dispatcher\IApplicationBuilder;
-use DevNet\Web\Extensions\ServiceCollectionExtensions;
-use DevNet\Web\Extensions\ApplicationBuilderExtensions;
-use DevNet\Web\Http\HttpContext;
+use DevNet\Core\Configuration\IConfiguration;
+use DevNet\Core\Dependency\IServiceCollection;
+use DevNet\Core\Dispatcher\IApplicationBuilder;
+use DevNet\Core\Extensions\ServiceCollectionExtensions;
+use DevNet\Core\Extensions\ApplicationBuilderExtensions;
+use DevNet\Core\Http\HttpContext;
 
 class Startup
 {
