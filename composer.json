@@ -1,6 +1,6 @@
 {
     "name": "devnet/web",
-    "description": "DevNet Web Application Project",
+    "description": "DevNet Web Application",
     "type": "devnet-template",
     "license": "MIT",
     "minimum-stability": "dev",
